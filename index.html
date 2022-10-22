@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSCI 5611 | Project 2</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://use.typekit.net/xcp8pap.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oku3xak.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>csci 5611: project 2</h1>
+            <h3>By: Hank Berger (berg2807)</h3>
+        </div>
+        <div class="background">
+            <div class="content">
+               <h1>Cloth Simulation</h1>
+               <h3>3D Cloth Simulation Using a Mass-Spring System.</h3>
+               <div class="buttonbox">
+                    <a href='https://hankberger.github.io/ClothSimThreeJS/' target='_blank'>
+                        <button class="b1">
+                            View the Live Project
+                        </button>
+                    </a> 
+                    <a href="https://github.com/hankberger/ClothSimThreeJS" target='_blank'>
+                        <button class="b2">
+                            View Code
+                        </button>
+                    </a>
+               </div>
+               <div class="videodiv">
+                    <h1>Video Demonstration</h1>
+                    <video controls>
+                        <source src="public/clothvid.mp4" type="video/mp4">
+                        Your browser does not support video.
+                    </video>
+               </div>
+               <div class='features'>
+                    <h1>Features</h1>
+                    <div class='featuresflex'>
+                        <div class="card">
+                            <h2>Cloth Simulation</h2>
+                            <p>Rope simulation was extended to include horizontal springs, this gives the illusion of cloth being simulated. Cloth parameters were fine-tuned to create a natural swinging motion.</p>
+                        </div>
+                        <div class="card">
+                            <h2>3D Simulation</h2>
+                            <p>Cloth Simulation was extended to 3D, the user is given a camera that they can use to easily navigate the scene in 3D and inspect the cloth from different positoins and angles.</p>
+                        </div>
+                        <div class="card">
+                            <h2>High-Quality Rendering</h2>
+                            <p>Cloth was given a plane with a lambert material to give it accurate lighting to a directional light placed in the scene. </p>
+                        </div>
+                        <div class="card">
+                            <h2>User Interaction</h2>
+                            <p>The user is given control of a sphere using the WASD keys for navigation on the xz plane, and also the spacebar and shift key for navigation on the y axis.</p>
+                        </div>
+                    </div>
+               </div>
+               <div class="videodiv">
+                <h1>Technologies Used</h1>
+                <div class = 'logodiv'>
+                    <img src="public/tslogo.png">
+                    <img src="public/threepng.png">
+                    <img src="public/vitepng.png">
+                    <img src="public/githubpng.png">
+                    
+                </div>
+                <h3>TypeScript &nbsp;&nbsp;&nbsp;&nbsp; ThreeJS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vite &nbsp;&nbsp;&nbsp;&nbsp;  Github Pages</h3>
+                
+                </div>
+                <div class="videodiv">
+                    <h1>Challenges I Encountered</h1>
+                    <div class = 'challenge'>
+                        <h3>I actually had a lot of trouble with this one. At first, I could not get my math or rendering working at all. I started completely from scratch 4 different times, making it that I was at the complete beginning after working on it for 4 days straight. What helped me out was building out a 2D cloth simulation in processing using the rope code given for one of the in-class activities.</h3>
+                        <br/>
+                        <h3>One of the biggest challenges I encountered was my simulaiton blowing up on my a ton. This happened no matter how low I set dt to, and no matter what the parameters of my simulation were. I found out this problem was due to my render loop taking an abnormally long time to calculate a few frames, which would lead to a massive dt that blew up my sim. I fixed this by only updating if dt was in a safe range <.5 ms.</h3>
+                    </div>
+                    
+                    </div>
+
+                    <div class="artdiv">
+                        <h1>Art Contest</h1>
+                        <p>It's Abstract and Modern</p>
+                            <img class="art" src="public/artcontest2.png">
+                            
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
